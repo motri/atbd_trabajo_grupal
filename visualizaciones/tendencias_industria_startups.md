@@ -15,14 +15,6 @@ top_industries = industry_totals.sort_values(by="startup_count", ascending=False
 
 filtered_data = data[data["industry"].isin(top_industries["industry"])]
 
-growth_data = data.pivot(index="industry", columns="year", values="startup_count").fillna(0)
-
-growth_data["growth"] = growth_data[2023] - growth_data[2015]
-
-highest_growth_industries = growth_data.sort_values(by="growth", ascending=False).head(10).reset_index()
-
-filtered_growth_data = data[data["industry"].isin(highest_growth_industries["industry"])]
-
 plt.figure(figsize=(14, 8))
 sns.lineplot(data=filtered_data, x="year", y="startup_count", hue="industry", marker="o")
 plt.title("Tendencias de startups por sector (2015-2024)")
