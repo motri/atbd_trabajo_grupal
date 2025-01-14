@@ -9,7 +9,7 @@ non_diverse_rnd = [43817, 46742, 48278, 8815, 17996, 25799, 31471, 37482, 38247,
 diverse_other = [920410, 996023, 990208, 1020610, 1331343, 1334151, 1240562, 1437952, 1506032, 1399451]
 non_diverse_other = [3251411, 3596322, 3694061, 4431829, 4985476, 4791181, 4968340, 5043833, 4980889, 4314148]
 
-# Calculate porcentajes
+# Calculamos porcentajes
 rnd_percentage = [
     (diverse / (diverse + non_diverse)) * 100
     for diverse, non_diverse in zip(diverse_rnd, non_diverse_rnd)
