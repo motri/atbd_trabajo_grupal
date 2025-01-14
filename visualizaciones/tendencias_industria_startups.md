@@ -1,3 +1,5 @@
+## Script the python para generar el grafico
+
 ```python
 import pandas as pd
 import seaborn as sns
@@ -42,5 +44,8 @@ plt.show()
 plt.tight_layout()
 plt.show()
 ```
+
+### Visualización de los resultados
+Una de las cosas que observamos fue la tendencia a la baja de la creacion de nuevos start ups, que coincide con la ralentizacion de los mercados y la consolidacion de las grandes empresas.
 
 ![Alt_text](../img/tendencias_su_sector.png)
