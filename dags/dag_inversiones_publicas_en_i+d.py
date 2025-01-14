@@ -3,9 +3,9 @@ from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOpe
 from datetime import datetime
 
 with DAG(
-    dag_id='lanza_consulta_inversiones_publicas_en_i+d',
+    dag_id='lanza_consulta_inversiones_publicas_en_i_mas_d',
     start_date=datetime(2025, 1, 1),
-    schedule_interval=None,  # Trigger manually
+    schedule_interval=None,  
     catchup=False,
     tags=['atbd_consultas'],
 ) as dag:
@@ -14,8 +14,8 @@ with DAG(
     spark_submit_task = SparkSubmitOperator(
         task_id='ejecuta_consulta',
         application='hdfs://172.31.20.226:9000/user/ec2-user/scripts/total_award_vs_rnd_multitype.py',
-        conn_id='spark_default',  # Airflow connection ID for Spark
-        name='consulta_inversiones_publicas_en_i+d',
+        conn_id='spark_default', 
+        name='consulta_inversiones_publicas_en_i_mas_d',
         verbose=True,
         conf={
             'spark.executor.memory': '1g',
