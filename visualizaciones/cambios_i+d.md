@@ -18,4 +18,4 @@ plt.tight_layout()
 plt.show()
 ```
 #### Gráfico resultante
-![Alt text](img/cambios_i+d.png)
+![Alt text](../img/cambios_i+d.png)
