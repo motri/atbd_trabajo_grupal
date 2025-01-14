@@ -63,3 +63,6 @@ A lo largo del desarrollo del proyecto, hemos utilizado **ChatGPT** como herrami
 5. **Generación de grafos complejos**:.
 El uso de ChatGPT nos permitió ahorrar tiempo y enfocarnos en aspectos clave del proyecto, asegurando una implementación más eficiente y robusta.
 
+---
+Autores:
+Javier Ibarra, Iker Martinez-Ayo, Unai Motriko
