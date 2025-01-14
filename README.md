@@ -7,7 +7,7 @@ Hemos usado airflow para orquestar la ejecución de los procesos de consulta spa
 ![Alt text](img/airflow_dag.png)
 
 #### Configuraciones de Airflow
-Para solventar problemas de dependencias y configuración generamos un zip con todos los jars necesarios para ejecutar todos nuestros scripts de consultas y se lo pasamos al dag como parte del conf, ademas de expecificar donde se encuentran los xml necesarios para una conexión correcta con el api de yarn.
+Para solventar problemas de dependencias y configuración generamos un zip con todos los jars necesarios para ejecutar todos nuestros scripts de consultas y se lo pasamos al dag como parte del conf, ademas de expecificar donde se encuentran los xml necesarios para una conexión correcta con el api de yarn:
 ```python
         conf={
             'spark.executor.memory': '1g',
@@ -19,3 +19,5 @@ Para solventar problemas de dependencias y configuración generamos un zip con t
             'YARN_CONF_DIR': '/etc/hadoop/conf',
         },
 ```
+Además usamos el connector de spark para airflow, en el que simplemente specificamos el tipo y yarn como host:
+![Alt_text](img/spark_connection.png)
