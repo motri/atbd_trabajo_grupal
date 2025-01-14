@@ -50,3 +50,16 @@ Nuestro objetivo ha sido visualizar tendencias dentro de las industrias de innov
 ---
 
 Con esta solución, hemos logrado integrar Airflow como herramienta central para la orquestación de consultas complejas y análisis en entornos distribuidos, mejorando la eficiencia y escalabilidad de nuestro flujo de trabajo.
+
+---
+### Uso de ChatGPT en el Proyecto
+
+A lo largo del desarrollo del proyecto, hemos utilizado **ChatGPT** como herramienta de apoyo para solucionar problemas relacionados con:
+
+1. **Arquitectura**: Identificar y solucionar problemas en la configuración de los diferentes componentes de la arquitectura, como Hadoop, Airflow y YARN.
+2. **Consultas**: Obtener sugerencias y ejemplos para optimizar consultas de Spark y mejorar el rendimiento.
+3. **Formatos de Datos**: Determinar los formatos más adecuados para almacenar y procesar los datos. Optamos por **Parquet** debido a su eficiencia en compresión y procesamiento.
+4. **Resolución de Errores**: Diagnosticar y resolver errores en tiempo real durante la integración de los distintos sistemas y scripts.
+
+El uso de ChatGPT nos permitió ahorrar tiempo y enfocarnos en aspectos clave del proyecto, asegurando una implementación más eficiente y robusta.
+
