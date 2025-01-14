@@ -1,27 +1,52 @@
-# atbd_trabajo_grupal
-### Arquitectura de la solución
-Hemos mantenido la arquitectura que desplegamos anteriormente para el cluster de Hadoop, y hemos añadido un instancia más para ejecutar airflow en ella.
-![Alt text](img/Arki-airflow-yarn.png)
-### Airflow como orquestador
-Hemos usado airflow para orquestar la ejecución de los procesos de consulta spark a través de yarn. Para ello generamos DAGs que hemos agrupado bajo la etiqueta de atb_consultas
-![Alt text](img/airflow_dag.png)
+# ATBD Trabajo Grupal
+
+### Arquitectura de la Solución
+
+Hemos mantenido la arquitectura utilizada previamente para desplegar el clúster de Hadoop y hemos añadido una instancia adicional para ejecutar **Airflow** en ella.
+
+![Arquitectura de Airflow y YARN](img/Arki-airflow-yarn.png)
+
+### Airflow como Orquestador
+
+Utilizamos **Airflow** para orquestar la ejecución de los procesos de consulta de Spark a través de YARN. Para ello, generamos DAGs agrupados bajo la etiqueta `atb_consultas`.
+
+![DAG de Airflow](img/airflow_dag.png)
 
 #### Configuraciones de Airflow
-Para solventar problemas de dependencias y configuración generamos un zip con todos los jars necesarios para ejecutar todos nuestros scripts de consultas y se lo pasamos al dag como parte del conf, ademas de expecificar donde se encuentran los xml necesarios para una conexión correcta con el api de yarn:
-```python
-        conf={
-            'spark.executor.memory': '1g',
-            'spark.executor.cores': '1',
-            'spark.yarn.archive': 'hdfs://172.31.20.226:9000/user/ec2-user/spark-hadoop-libs.zip',
-        },
-        env_vars={
-            'HADOOP_CONF_DIR': '/etc/hadoop/conf',
-            'YARN_CONF_DIR': '/etc/hadoop/conf',
-        },
-```
-Además usamos el connector de spark para airflow, en el que simplemente specificamos el tipo y yarn como host:
-![Alt_text](img/spark_connection.png)
 
-#### Consultas
-Hemos realizado consultas con el objectivo de visualizar tendencias dentro de las industrias de innovación e investigación en USA, usando contratos publicos como punto de referencia. Para ellos hemos usado 3 datasets (En el caso de USASpending los datasets estaban divididos por años y cada año contenia varios csv con un tamaño maximo de 2.2gb).
-Hemos analizado tendencias dentro de las cantidades invertidas durante años, cambios en los estados que recibieron la financiación, industrias dentro del I+D, estados donde se crearon empresas comparados con gastos publicos en esos estados, numero de empresas que se consideran representativas de minorias o que se acogen al tipo diversity y cuantas de ellas eran dirigidas, fundadas o mayoritariamente de mejures.
+Para solucionar problemas de dependencias y configuración, generamos un archivo ZIP que incluye todos los JAR necesarios para ejecutar nuestros scripts de consultas. Este archivo se pasa al DAG como parte de la configuración (`conf`). Además, especificamos las ubicaciones de los archivos XML necesarios para una conexión adecuada con la API de YARN:
+
+```python
+conf={
+    'spark.executor.memory': '1g',
+    'spark.executor.cores': '1',
+    'spark.yarn.archive': 'hdfs://172.31.20.226:9000/user/ec2-user/spark-hadoop-libs.zip',
+},
+env_vars={
+    'HADOOP_CONF_DIR': '/etc/hadoop/conf',
+    'YARN_CONF_DIR': '/etc/hadoop/conf',
+},
+```
+También utilizamos el conector de Spark para Airflow, donde simplemente especificamos el tipo y configuramos YARN como host:
+
+![Configuración de conexión de Spark](img/spark_connection.png)
+
+---
+
+### Consultas Realizadas
+
+Nuestro objetivo ha sido visualizar tendencias dentro de las industrias de innovación e investigación en Estados Unidos, utilizando contratos públicos como referencia. Para ello, empleamos tres datasets. En el caso de **USASpending**, los datos estaban divididos por años, y cada año contenía varios CSV con un tamaño máximo de 2.2 GB.
+
+#### Áreas Analizadas:
+
+1. **Tendencias de Inversión**: Analizamos las cantidades invertidas a lo largo de los años.
+2. **Distribución Geográfica**: Identificamos los cambios en los estados que recibieron financiación.
+3. **Industrias de I+D**: Observamos las áreas de investigación y desarrollo que captaron mayor inversión.
+4. **Creación de Empresas y Gastos Públicos**: Comparación de los estados donde se crearon empresas con los gastos públicos realizados en esos estados.
+5. **Diversidad en las Empresas**:
+   - Número de empresas representativas de minorías o clasificadas bajo el tipo "diversidad".
+   - Porcentaje de estas empresas dirigidas, fundadas o mayoritariamente gestionadas por mujeres.
+
+---
+
+Con esta solución, hemos logrado integrar Airflow como herramienta central para la orquestación de consultas complejas y análisis en entornos distribuidos, mejorando la eficiencia y escalabilidad de nuestro flujo de trabajo.
