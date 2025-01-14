@@ -1,3 +1,5 @@
+#### Codigo para generar el gráfico
+
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -35,5 +37,6 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
+#### Grafica resultante
 
 ![Alt_text](../img/mujeres.png)
