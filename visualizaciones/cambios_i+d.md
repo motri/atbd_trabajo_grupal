@@ -1,8 +1,9 @@
+#### Codigo para generar el gráfico
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Bar plot for the top changed states
+
 plt.figure(figsize=(12, 8))
 sns.barplot(
     data=top_changed_states,
@@ -15,3 +16,6 @@ plt.xlabel("Cambio Total en Premios de I+D", fontsize=12)
 plt.ylabel("Estado", fontsize=12)
 plt.tight_layout()
 plt.show()
+```
+#### Gráfico resultante
+![Alt text](img/cambios_i+d.png)
