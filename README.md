@@ -18,8 +18,6 @@ Para solucionar problemas de dependencias y configuración, generamos un archivo
 
 ```python
 conf={
-    'spark.executor.memory': '1g',
-    'spark.executor.cores': '1',
     'spark.yarn.archive': 'hdfs://172.31.20.226:9000/user/ec2-user/spark-hadoop-libs.zip',
 },
 env_vars={
