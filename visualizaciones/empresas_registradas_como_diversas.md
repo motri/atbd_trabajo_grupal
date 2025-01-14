@@ -50,4 +50,4 @@ plt.show()
 
 ```
 
-![Alt text](../img/)
+![Alt text](../img/empresas_diversas.png)
