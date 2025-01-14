@@ -60,6 +60,6 @@ A lo largo del desarrollo del proyecto, hemos utilizado **ChatGPT** como herrami
 2. **Consultas**: Obtener sugerencias y ejemplos para optimizar consultas de Spark y mejorar el rendimiento.
 3. **Formatos de Datos**: Determinar los formatos más adecuados para almacenar y procesar los datos. Optamos por **Parquet** debido a su eficiencia en compresión y procesamiento.
 4. **Resolución de Errores**: Diagnosticar y resolver errores en tiempo real durante la integración de los distintos sistemas y scripts.
-
+5. **Generación de grafos complejos**:.
 El uso de ChatGPT nos permitió ahorrar tiempo y enfocarnos en aspectos clave del proyecto, asegurando una implementación más eficiente y robusta.
 
