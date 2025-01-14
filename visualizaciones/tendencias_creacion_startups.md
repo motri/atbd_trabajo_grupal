@@ -17,4 +17,7 @@ plt.ylabel("Numero de Startups")
 plt.legend(loc="upper left", bbox_to_anchor=(1, 1), title="Estado")
 plt.show()
 ```
+### Visualización de los resultados
+Una de las cosas que observamos fue la tendencia a la baja de la creacion de nuevos startups, que coincide con la ralentizacion de los mercados y la consolidacion de las grandes empresas.
+
 ![Alt_text](../img/startups_estado.png)
