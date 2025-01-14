@@ -21,3 +21,7 @@ Para solventar problemas de dependencias y configuración generamos un zip con t
 ```
 Además usamos el connector de spark para airflow, en el que simplemente specificamos el tipo y yarn como host:
 ![Alt_text](img/spark_connection.png)
+
+#### Consultas
+Hemos realizado consultas con el objectivo de visualizar tendencias dentro de las industrias de innovación e investigación en USA, usando contratos publicos como punto de referencia. Para ellos hemos usado 3 datasets (En el caso de USASpending los datasets estaban divididos por años y cada año contenia varios csv con un tamaño maximo de 2.2gb).
+Hemos analizado tendencias dentro de las cantidades invertidas durante años, cambios en los estados que recibieron la financiación, industrias dentro del I+D, estados donde se crearon empresas comparados con gastos publicos en esos estados, numero de empresas que se consideran representativas de minorias o que se acogen al tipo diversity y cuantas de ellas eran dirigidas, fundadas o mayoritariamente de mejures.
