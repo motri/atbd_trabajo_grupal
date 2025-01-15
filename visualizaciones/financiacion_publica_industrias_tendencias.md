@@ -1,3 +1,4 @@
+### Codigo para generar la grafica
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,5 +33,6 @@ plt.tight_layout()
 
 plt.show()
 ```
+### Grafica resultante
 
 ![Alt_text](../img/cambios_financiacion.png)
