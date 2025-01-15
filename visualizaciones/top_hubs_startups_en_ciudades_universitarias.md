@@ -42,4 +42,4 @@ plt.title("Startup Distribution by City and State (2015-2024)")
 plt.xlabel("State")
 ```
 
-![Alt_text](../img/su_universidades.pns)
+![Alt_text](../img/su_universidades.png)
