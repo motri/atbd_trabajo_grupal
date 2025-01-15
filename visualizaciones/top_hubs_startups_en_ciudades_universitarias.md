@@ -42,5 +42,7 @@ sns.heatmap(
 plt.title("Startup Distribution by City and State (2015-2024)")
 plt.xlabel("State")
 ```
+### Grafica Resultante
+Podemos observar que la mayoria de nuevas startups se crearon tanto cerca de Palo Alto (Silicon Valley) como en Cambridge, Ma (MIT).
 
 ![Alt_text](../img/su_universidades.png)
